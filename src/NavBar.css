@@ -1,0 +1,33 @@
+.navbar-container {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    /* min-height:  */
+    /* position: fixed; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    box-sizing: content-box;
+    max-height: 80px;
+    justify-content: center;
+}
+
+.navbar {
+    color: #555;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: #555;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: #222;
+}

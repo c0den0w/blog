@@ -1,0 +1,14 @@
+.mywork-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* Timeline responsive adjustments */
+@media (max-width: 768px) {
+    .mywork-container {
+        min-height: calc(100vh - 80px);
+        padding: 1rem 0;
+    }
+}

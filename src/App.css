@@ -1,0 +1,44 @@
+* {
+    font-family: monospace;
+    font-size: 1rem;
+}
+body{
+    margin: 0
+}
+
+/* Scroll Guide Styles */
+.scroll-guide-container {
+    position: fixed;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scroll-guide-track {
+    width: 3px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-guide-indicator {
+    width: 100%;
+    background: linear-gradient(to bottom, #3b82f6, #1d4ed8);
+    border-radius: 2px;
+    transition: height 0.1s ease-out;
+    min-height: 2px;
+}
+
+.scroll-progress-text {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    min-width: 28px;
+    text-align: center;
+}

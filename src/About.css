@@ -1,0 +1,112 @@
+.about-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.about-grid-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 80vw;
+  max-height: 60vh;
+  width: 100%;
+}
+
+.about-cell {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #222;
+  padding: 1.25rem;
+  overflow: auto;
+}
+
+.about-description {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* spans both rows */
+}
+
+.about-skills {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.about-certs {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.skill-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  /* keep icon colors readable on white */
+  filter: none;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+}
+
+.certs-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-family: monospace;
+  /* allow certification items to flow into two columns when there is enough content/width */
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  column-gap: 1rem;
+}
+
+.certs-list li {
+  margin-bottom: 0.4rem;
+  /* avoid breaking a certification item across columns */
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    max-width: 95vw;
+    max-height: none;
+  }
+
+  .about-description {
+    grid-row: 1 / 2;
+  }
+
+  .about-skills {
+    grid-row: 2 / 3;
+  }
+
+  .about-certs {
+    grid-row: 3 / 4;
+  }
+}
