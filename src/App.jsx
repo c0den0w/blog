@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import viteLogo from '/vite.svg'
 import NavBar from "./NavBar.jsx";
 import About from './About.jsx';
 import Hero from "./Hero.jsx";
